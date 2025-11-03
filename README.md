@@ -348,7 +348,8 @@ graph TD
 - [ ] [AI Agent 学习路线图（本文档）](./README.md)
 - [ ] [简历编写指南：如何突出 Agent 项目](./docs/04-interview/04-resume-guide.md)
 - [ ] [算法岗 vs 开发岗：如何讲好你的项目故事](./docs/04-interview/05-storytelling.md)
-- [ ] [转行大模型热门方向准备指南](./docs/04-interview/06-career-transition.md)
+- [x] [⭐ 转行大模型热门方向准备指南](./docs/04-interview/06-career-transition.md)
+- [x] [⭐ 如何准备大模型秋招完整攻略](./docs/04-interview/07-job-hunting-guide.md)
 
 #### 4.3 优质资源汇总
 - [ ] [必读论文清单](./resources/papers.md)

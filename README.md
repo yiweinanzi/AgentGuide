@@ -769,123 +769,555 @@ AgentGuide 提供 **n 个简历级实战项目**，每个项目都提供：
 
 ## 🎓 第五步：系统学习 Agent 技术（技术准备）
 
-> **基于你选择的岗位，有针对性地学习相关技术**
+> 💡 **学习目标**：掌握 Agent 开发完整技术栈，从理论到实战全覆盖  
+> 🔬 **算法岗重点**：深入理解原理，能推导公式，关注创新点  
+> 🛠️ **开发岗重点**：熟练使用框架，快速实现功能，注重工程化
 
-### 📚 完整知识体系
+### 📊 技术能力四层模型
 
-### 📖 第一部分：AI Agent 核心理论（基石篇）
+我们将 Agent 技术划分为**四大能力层级**，每个层级对应不同的学习模块：
+我来创建一个三列的内容导航表格：
 
-> 💡 **学习目标**：理解 Agent 的本质，掌握主流架构思想  
-> 🔬 **算法岗重点**：深入理解原理，能推导公式  
-> 🛠️ **开发岗建议**：理解概念即可，快速过一遍
+## 📑 内容导航
 
-#### 1.1 Agent 基础概念入门
-- [ ] [必看👍 到底什么是 AI Agent？图文详解](./docs/01-theory/01-what-is-agent.md)
-- [ ] [核心组件详解：Planning、Memory、Tool Use](./docs/01-theory/02-core-components.md)
-- [ ] [Agent 与 RAG 的关系](./docs/01-theory/03-agent-vs-rag.md)
 
-#### 1.2 主流 Agent 架构思想
-- [ ] [必看👍 ReAct 框架思想详解](./docs/01-theory/04-react-framework.md)
-- [ ] [思维链 (Chain-of-Thought, CoT) 与 Agent 规划](./docs/01-theory/05-cot-and-planning.md)
-- [ ] [高阶架构：Tree of Thoughts, Self-Correction, Self-Consistency](./docs/01-theory/06-advanced-architectures.md)
-- [ ] [多智能体系统 (Multi-Agent) 入门](./docs/01-theory/07-multi-agent-intro.md)
+| 章节                  | 内容介绍                                | 进展  |
+| :------------------ | :---------------------------------- | :-- |
+| **🔰 L1-基础认知层**     | 理解核心概念、掌握基本原理（1-2周）                 |     |
+| 模块1：Agent核心概念解析     | 智能体定义与分类体系、5级自主性模型                  | ✅   |
+| 模块2：技术演进历程与趋势洞察     | 从专家系统到神经网络的发展轨迹                     | ✅   |
+| 模块3：大模型工作原理         | Transformer/分词/训练/推理/对齐技术           | ✅   |
+| **🛠️ L2-开发实现层**    | 掌握框架工具、完成系统搭建（3-4周）                 |     |
+| 模块4：经典Agent范式手撕实现   | ReAct、Plan-Execute、Reflection模式     | ✅   |
+| 模块5：低代码平台快速验证       | LangChain、Dify、Coze、n8n工具使用         | ✅   |
+| 模块6：主流框架深度实战        | LangGraph、AutoGen、AgentScope、CrewAI | ✅   |
+| 模块7：自研Agent框架设计原理   | 消息路由、工具注册、异常处理、日志追踪                 | ✅   |
+| **🚀 L3-高阶优化层**     | 检索优化、上下文管理、模型训练（4-5周）               |     |
+| 模块8：检索增强生成（RAG）全栈技术 | 数据预处理、索引构建、检索优化、高级RAG               | ✅   |
+| 模块9：上下文工程           | Write/Select/Compress/Isolate四大策略   | ✅   |
+| 模块10：智能体通信标准与协议     | MCP、A2A、ANP协议详解                     | ✅   |
+| 模块11：模型微调与强化学习      | SFT、LoRA、PPO、DPO、GRPO算法应用           | ✅   |
+| 模块12：性能评估与效果量化      | 评估维度、测试框架、自定义评估方法                   | ✅   |
 
-#### 1.3 Agent 评估与基准
-- [ ] [AgentBench：主流 Agent 评测框架介绍](./docs/01-theory/08-agent-bench.md)
-- [ ] [如何科学评估 Agent 性能？](./docs/01-theory/09-evaluation-metrics.md)
+| 模块16：毕业设计 | 端到端项目实战、系统设计、性能优化 | ✅ |
+---
+
+### 学习路径详细拆解
+
+#### 🔰 L1-基础认知层（打地基）
+
+**学习目标**：建立完整的 Agent 认知体系，理解底层原理
+
+**模块1：Agent 核心概念解析**
+- 智能体定义与分类体系（5级自主性模型）
+- Agent vs 传统程序 vs LLM对话的本质区别
+- Agent 系统四大核心组件（Role/Memory/Tools/Guardrails）
+
+**模块2：技术演进历程与趋势洞察**
+- 从专家系统到神经网络的发展轨迹
+- LLM 如何赋能新一代 Agent
+- 里程碑论文深度解读（ReAct/Reflexion/AutoGPT）
+
+**模块3：大模型工作原理（Agent的大脑）**
+
+核心知识点：
+- **架构层**：Transformer/Self-Attention/MoE 原理
+- **数据层**：Tokenizer 机制、中文分词、Token 计算
+- **训练层**：预训练/SFT/LoRA 原理与实践
+- **推理层**：vLLM/TGI 推理优化、量化技术
+- **对齐层**：RLHF/PPO/DPO 算法详解
 
 ---
 
-### 🛠️ 第二部分：核心技术栈与框架（工具篇）
+#### 🛠️ L2-开发实现层（动手实践）
 
-> 💡 **学习目标**：掌握 Agent 开发的核心工具链，快速搭建原型系统  
-> 🔬 **算法岗重点**：理解框架原理，必要时能魔改源码  
-> 🛠️ **开发岗重点**：熟练使用框架，快速实现功能
+**学习目标**：从零搭建 Agent 系统，掌握主流开发框架
 
-#### 2.1 大语言模型 (LLMs) - Agent 的大脑
-- [ ] [主流 LLM API 对比与选型](./docs/02-tech-stack/01-llm-api-comparison.md)
-- [ ] [开源 LLM 本地部署与调用](./docs/02-tech-stack/02-open-source-llm.md)
-- [ ] [Fine-tuning 入门：什么时候需要微调？](./docs/02-tech-stack/03-llm-finetuning.md)
+**模块4：经典 Agent 范式手撕实现**
 
-#### 2.2 Agent 开发框架（必看👍）
-- [ ] [必看👍 LangChain 核心概念与实战](./docs/02-tech-stack/04-langchain-guide.md)
-- [ ] [LlamaIndex 核心概念与实战](./docs/02-tech-stack/05-llamaindex-guide.md)
-- [ ] [AutoGen/CrewAI 多智能体框架详解](./docs/02-tech-stack/06-multi-agent-frameworks.md)
-- [ ] [框架选型对比：何时用 LangChain vs LlamaIndex](./docs/02-tech-stack/07-framework-comparison.md)
+从零实现三大核心模式：
 
-#### 2.3 向量数据库与上下文 - Agent 的记忆
-- [ ] [必看👍 向量数据库基础：Embedding 与向量检索](./docs/02-tech-stack/08-vector-db-basics.md)
-- [ ] [主流向量数据库对比与实战](./docs/02-tech-stack/09-vector-db-comparison.md)
-- [ ] [RAG 检索策略详解：从基础到 HyDE、Rerank、Query Expansion](./docs/02-tech-stack/10-rag-strategies.md)
+1. **ReAct 模式**：Thought → Action → Observation 循环
+2. **Plan-Execute 模式**：任务分解与依赖处理
+3. **Reflection 模式**：自我评估与策略调整
 
-#### 2.4 工具 (Tools) - Agent 的双手
-- [ ] [API 工具：让 Agent 调用外部服务](./docs/02-tech-stack/11-api-tools.md)
-- [ ] [代码解释器 (Code Interpreter)：原理与实现](./docs/02-tech-stack/12-code-interpreter.md)
-- [ ] [网络浏览 (Web Browsing)：原理与实现](./docs/02-tech-stack/13-web-browsing.md)
+**模块5：低代码平台快速验证**
 
-#### 2.5 上下文工程 (Context Engineering) - Agent 开发的核心本质！⭐⭐⭐
+工具选型与使用：
+- **代码优先**：LangChain/LlamaIndex/AutoGen/AgentScope
+- **低代码**：Dify/Coze/n8n 工作流编排
+- 各类工具的适用场景与优缺点对比
 
-> **💡 重要提示**：上下文工程是 Agent 开发的核心，建议优先学习！
+**模块6：主流框架深度实战**
 
-- [x] [必看👍 业界最佳实践精华（600字快速入门）](./docs/02-tech-stack/11-context-engineering-practices.md)
-- [x] [必看👍 全网最全最优质的上下文工程资源合集](./docs/02-tech-stack/13-context-engineering-resources.md) 🔥
-- [x] [必看👍 上下文工程完全指南：7大核心组件详解](./docs/02-tech-stack/18-context-engineering-guide.md)
-- [x] [必看👍 长上下文陷阱与6大修复技巧](./docs/02-tech-stack/14-context-engineering.md)
-- [x] [必看👍 Agent Memory 完整教程：从原理到实战](./docs/02-tech-stack/15-agent-memory.md)
-- [x] [必看👍 12-Factor Agent 架构：从循环到工程化](./docs/02-tech-stack/12-factor-agent-architecture.md)
-- [x] [必看👍 Claude Code 最佳实践：顶级产品的工程经验](./docs/02-tech-stack/17-claude-code-best-practices.md)
-- [ ] [必看👍 Parlant Agent 合规保障深度解析](./docs/02-tech-stack/22-parlant-agent-compliance-deep-dive.md)
+框架能力对比与应用：
 
-**📖 更多学习资源**：查看 [02-tech-stack 完整学习路径](./docs/02-tech-stack/README.md)
+| 框架 | 核心优势 | 最佳场景 |
+|:-----|:---------|:---------|
+| **LangGraph** | 图导向、精确控制 | 复杂工作流 |
+| **AutoGen** | 多Agent对话 | 团队协作 |
+| **AgentScope** | 消息驱动、灵活 | 国内场景 |
+| **CrewAI** | 角色分工、层级 | 企业应用 |
 
-#### 2.6 模型微调 (Fine-tuning) - 算法岗必备 ⭐
-- [x] [必看👍 SFT 监督微调完全指南：从原理到实战](./docs/02-tech-stack/16-sft-finetuning.md)
+**模块7：自研 Agent 框架设计原理**
 
-#### 2.7 强化学习 (Reinforcement Learning) - Agent 算法岗核心 ⭐⭐⭐
-- [ ] [必看👍 Agent 强化学习完全指南](./docs/02-tech-stack/21-agent-reinforcement-learning.md)
-  - 强化学习基础（MDP、Q-Learning、Policy Gradient）
-  - RLHF（Reinforcement Learning from Human Feedback）完整流程
-  - PPO（Proximal Policy Optimization）原理与实现
-  - DPO（Direct Preference Optimization）- 无需 RL 的对齐方法
-  - GRPO（Group Relative Policy Optimization）- DeepSeek 最新方法
-  - Agent RL 应用（工具调用优化、规划策略学习、Multi-Agent 协作）
-  - 实战案例（LangChain + PPO 优化 Agent 决策）
-#### 2.8 合成数据 (Synthetic Data) - Agent 训练与评估的关键 ⭐
-- [ ] [必看👍 合成数据生成完全指南](./docs/02-tech-stack/19-synthetic-data.md)
-  - 什么是合成数据？为什么重要？
-  - 合成数据生成方法（LLM生成、规则生成、数据增强）
-  - 合成数据质量评估
-  - Agent/RAG 系统的合成数据实战
-
-#### 2.9 RAG 全流程 (End-to-End RAG Pipeline) - 开发岗必备 ⭐
-- [ ] [必看👍 RAG 系统完整开发指南](./docs/02-tech-stack/20-rag-full-pipeline.md)
-  - RAG 系统架构设计（文档处理 → 向量化 → 检索 → 生成）
-  - 文档解析与预处理（PDF、Word、PPT、HTML、Markdown）
-  - Embedding 与向量数据库选型
-  - 检索策略优化（混合检索、重排序、Query改写）
-  - 生成质量优化（Prompt 工程、上下文注入）
-  - 评估体系（RAGAS、人工评估）
-  - 生产部署（缓存、监控、成本优化）
-#### 2.10 失败经验与避坑指南 ⭐
-- [x] [真实项目的坑与教训](./docs/02-tech-stack/23-lessons-learned.md)
+理解框架底层设计，培养自主开发能力：
+- 消息路由与状态管理机制
+- 工具注册与动态加载系统
+- 异常处理与重试策略
+- 可观测性与日志追踪
 
 ---
 
-### 🚀 第三部分：系统设计与实战（应用篇）
+#### 🚀 L3-高阶优化层（进阶提升）
 
-> 💡 **学习目标**：从玩具到产品，完成可写进简历的项目  
-> 🔬 **算法岗重点**：实验设计、评估体系、算法优化  
-> 🛠️ **开发岗重点**：系统架构、性能优化、生产部署
+**学习目标**：掌握 RAG、上下文工程、模型微调等高级技术
 
-#### 3.1 Agent 系统设计
-- [ ] [必看👍 Agent 系统设计面试题总结](./docs/03-practice/01-system-design-interview.md)
-- [ ] [如何设计一个高可用的 RAG 系统？](./docs/03-practice/02-high-availability-rag.md)
-- [ ] [Agent 安全性：Prompt 注入、权限控制、数据隐私](./docs/03-practice/03-agent-security.md)
-- [ ] [Agent 可观测性：监控、调试与追踪](./docs/03-practice/04-observability.md)
+**模块8：检索增强生成（RAG）全栈技术**
 
-#### 3.2 简历级实战项目 🚀
+完整 Pipeline 掌握：
+
+**8.1 数据预处理**
+- 文档解析（PDF/Markdown 高保真提取）
+- 智能分块（Semantic Chunking 语义切分）
+- 元数据增强（结构化信息提取）
+
+**8.2 索引构建与管理**
+- Embedding 模型选型与评估
+- 向量数据库对比（Milvus/Chroma/Qdrant）
+- 多模态索引（图文混合处理）
+
+**8.3 检索策略优化**
+- 混合检索（Hybrid Search 向量+关键词）
+- 查询重写（HyDE/Query Expansion）
+- Reranker 二次排序
+- Text2SQL 自然语言查询
+
+**8.4 高级 RAG 架构**
+- **GraphRAG**：知识图谱增强检索
+- **Modular RAG**：模块化可组合架构
+- **Agentic RAG**：智能体驱动的自主检索
+- **Multimodal RAG**：跨模态理解与检索
+
+**模块9：上下文工程（Context Engineering）⭐⭐⭐**
+
+> "将海量信息中最相关的内容，精准放入有限上下文窗口的艺术"
+
+**核心策略 - The 4 Acts**：
+- **Write（写入）**：Prompt 设计、Memory 结构化存储
+- **Select（选择）**：RAG 检索、动态工具加载
+- **Compress（压缩）**：摘要生成、Token 剪枝优化
+- **Isolate（隔离）**：状态隔离、沙盒环境设计
+
+**工程实践技巧**：
+- KV Cache 优化（降低 90% 成本与延迟）
+- 12-Factor Agents 生产级设计原则
+- Claude Code 最佳实践
+
+**常见问题修复**：
+- 上下文中毒（Poisoning）
+- 注意力分散（Distraction）
+- 信息冲突（Clash）
+
+**模块10：智能体通信标准与协议**
+
+| 协议 | 功能定位 | 核心能力 | 应用场景 |
+|:-----|:---------|:---------|:---------|
+| **MCP** | Model Context Protocol | 标准化上下文与工具交换 | 跨平台工具调用、统一接口 |
+| **A2A** | Agent-to-Agent | 智能体间协作通信 | Multi-Agent 系统、任务分发 |
+| **ANP** | Agent Negotiation Protocol | 智能体协商与共识 | 资源分配、冲突解决 |
+
+**模块11：模型微调与强化学习**
+
+从监督微调到强化学习的完整路径：
+
+**11.1 监督微调（SFT）**
+- LoRA/QLoRA 参数高效微调原理
+- Function Call 微调实战
+- 指令数据集构建技巧
+- LlaMA-Factory 实战应用
+
+**11.2 强化学习（RLHF）**
+- **PPO**：Proximal Policy Optimization
+- **DPO**：Direct Preference Optimization
+- **GRPO**：DeepSeek 的群组相对策略优化
+- Reward Model 训练技巧
+
+**11.3 Agent RL 应用**
+- 工具调用策略优化
+- 规划能力增强训练
+- 自我修正机制训练
+
+**模块12：性能评估与效果量化**
+
+如何科学评估 Agent 性能？
+
+**评估维度**：
+- **准确性**：任务完成率、答案正确率
+- **效率**：平均步数、Token 消耗
+- **鲁棒性**：错误恢复、异常处理
+- **成本**：API 调用次数、计算资源
+
+**评估框架**：
+- **AgentBench**：通用 Agent 评测基准
+- **WebArena**：Web 任务评测
+- **KGQA**：知识图谱问答
+- **HotPotQA**：多跳推理测试
+
+**自定义评估**：
+- 构建测试集的方法论
+- 使用 Ragas 自动评估
+- 人工评估与 LLM-as-Judge
+
+
+---
+
+### 🔰 L1-基础认知层详解
+
+> **学习时长**：1-2 周 | **难度**：⭐⭐⭐ | **重要性**：⭐⭐⭐⭐⭐
+
+#### 🎯 阶段目标
+- ✅ 理解 Agent 的本质定义与核心组件
+- ✅ 掌握 Transformer 架构与大模型基础
+- ✅ 了解 Agent 技术发展历程与未来趋势
+
+#### 📚 学习内容
+
+<table>
+<tr>
+<td width="50%">
+
+**模块1：Agent 核心概念解析**
+- 智能体定义、类型、范式与应用
+- 5级自主性分类体系
+  - L1: 基础响应器（Responder）
+  - L2: 路由模式（Router）
+  - L3: 工具调用者（Tool Caller）
+  - L4: 多智能体协作（Multi-Agent）
+  - L5: 完全自主（Autonomous）
+- Agent 系统解剖学
+  - 角色与聚焦（Role & Focus）
+  - 记忆系统（Memory）
+  - 工具生态（Tools）
+  - 安全防护（Guardrails）
+
+📖 [阅读：什么是 AI Agent？](./docs/01-theory/01-what-is-agent.md)
+
+</td>
+<td width="50%">
+
+**模块2：技术演进历程与趋势洞察**
+- 符号主义时代（1950s-1990s）
+- 连接主义崛起（1990s-2010s）
+- 深度学习革命（2012-2020）
+- LLM 驱动的 Agent 时代（2020-至今）
+- 关键里程碑论文解读
+  - ReAct（推理+行动）
+  - Reflexion（自我反思）
+  - AutoGPT（自主规划）
+  - Multi-Agent（协作涌现）
+
+📖 [阅读：Agent 技术演进史](./docs/01-theory/02-agent-history.md)
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+**模块3：大模型工作原理（Agent的大脑）**
+
+> **Agent 的"大脑"是 LLM，理解大脑的工作原理是构建 Agent 的前提**
+
+| 知识模块 | 核心内容 | 学习要点 |
+|:-----|:---------|:---------|
+| **架构层** | Transformer、Self-Attention、MoE | 注意力机制、上下文窗口、位置编码（RoPE/ALiBi） |
+| **数据层** | Word2Vec、BPE、WordPiece | Tokenizer 原理、中文分词（jieba）、Token 计算 |
+| **训练层** | 预训练、SFT、LoRA/QLoRA | 分布式训练、参数高效微调、显存优化技巧 |
+| **推理层** | vLLM、TGI、量化技术 | PagedAttention、GPTQ/AWQ 量化、推理优化 |
+| **对齐层** | RLHF、PPO、DPO | Reward Model、策略优化、人类偏好对齐 |
+
+📖 [深入阅读：Transformer 架构详解](./docs/01-theory/03-transformer.md)
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🛠️ L2-开发实现层详解
+
+> **学习时长**：3-4 周 | **难度**：⭐⭐⭐⭐ | **重要性**：⭐⭐⭐⭐⭐
+
+#### 🎯 阶段目标
+- ✅ 手撕核心 Agent 架构（ReAct、Plan-Solve、Reflexion）
+- ✅ 掌握主流开发框架（LangChain、AutoGen、AgentScope）
+- ✅ 能够独立搭建完整的 Agent 系统
+
+#### 🔨 实操内容
+
+<table>
+<tr>
+<td width="50%">
+
+**模块4：经典 Agent 范式手撕实现**
+
+从零实现三大核心模式：
+
+**1. ReAct 模式**
+- Thought（思考）→ Action（行动）→ Observation（观察）
+- 工具调用与结果解析
+- 循环终止条件设计
+
+**2. Plan-Execute 模式**
+- 任务分解（Task Decomposition）
+- 子任务规划与执行
+- 依赖关系处理
+
+**3. Reflection 模式**
+- Self-Evaluation（自我评估）
+- Error Analysis（错误分析）
+- Strategy Adjustment（策略调整）
+
+📖 [实战教程：手撕 ReAct](./docs/01-theory/04-react-framework.md)  
+📖 [实战教程：规划与执行](./docs/01-theory/05-cot-and-planning.md)
+
+</td>
+<td width="50%">
+
+**模块5：低代码平台快速验证**
+
+工具选型与使用：
+
+**1. 代码优先（Code-First）**
+- **LangChain/LangGraph**：工业界标准
+- **LlamaIndex**：数据导向，RAG 首选
+- **AutoGen/CrewAI**：Multi-Agent 协作
+- **AgentScope**：阿里开源，易上手
+
+**2. 低代码/无代码（Low-Code）**
+- **Dify**：开源 LLM 应用平台
+- **Coze/扣子**：字节跳动，快速搭建
+- **n8n**：工作流自动化神器
+
+📖 [框架对比：如何选择？](./docs/02-tech-stack/04-langchain-guide.md)  
+📖 [Multi-Agent 框架详解](./docs/02-tech-stack/06-multi-agent-frameworks.md)
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+**模块6：主流框架深度实战**
+
+框架能力对比与应用：
+
+| 框架 | 核心特性 | 适用场景 | 学习资源 |
+|:-----|:---------|:---------|:---------|
+| **LangGraph** | 图导向、状态管理、循环控制 | 复杂工作流、需要精确控制的场景 | [📖 完整教程](./docs/02-tech-stack/04-langchain-guide.md) |
+| **AutoGen** | 多 Agent 对话、角色扮演 | 团队协作、复杂任务分解 | [📖 实战指南](./docs/02-tech-stack/06-multi-agent-frameworks.md) |
+| **AgentScope** | 消息驱动、灵活扩展 | 国内场景、中文优化 | [📖 快速上手](./docs/02-tech-stack/07-agentscope.md) |
+| **CrewAI** | 角色分工、层级管理 | 企业级应用、流程自动化 | [📖 企业实战](./docs/02-tech-stack/06-multi-agent-frameworks.md) |
+
+**模块7：自研 Agent 框架设计原理**
+
+理解框架底层设计，培养自主开发能力：
+- 消息路由与状态管理机制
+- 工具注册与动态加载系统
+- 异常处理与重试策略
+- 可观测性与日志追踪
+
+📖 [实战项目：打造自己的 Agent 框架](./docs/02-tech-stack/22-build-your-agent-framework.md)
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🚀 L3-高阶优化层详解
+
+> **学习时长**：4-5 周 | **难度**：⭐⭐⭐⭐⭐ | **重要性**：⭐⭐⭐⭐⭐
+
+#### 🎯 阶段目标
+- ✅ 掌握 RAG 全栈技术（数据处理、检索优化、高级 RAG）
+- ✅ 精通上下文工程（Context Engineering 2.0）
+- ✅ 理解 Agent 评估体系与微调方法
+
+#### 💡 高级技术
+
+<table>
+<tr>
+<td width="50%">
+
+**模块8：检索增强生成（RAG）全栈技术**
+
+**8.1 数据预处理**
+- 文档解析（PDF/Markdown 高保真提取）
+- 智能分块（Semantic Chunking 语义切分）
+- 元数据增强（结构化信息提取）
+
+**8.2 索引构建与管理**
+- Embedding 模型选型与评估
+- 向量数据库对比（Milvus/Chroma/Qdrant）
+- 多模态索引（图文混合处理）
+
+**8.3 检索策略优化**
+- 混合检索（Hybrid Search 向量+关键词）
+- 查询重写（HyDE/Query Expansion）
+- Reranker 二次排序
+- Text2SQL 自然语言查询
+
+**8.4 高级 RAG 架构**
+- **GraphRAG**：知识图谱增强检索
+- **Modular RAG**：模块化可组合架构
+- **Agentic RAG**：智能体驱动的自主检索
+- **Multimodal RAG**：跨模态理解与检索
+
+📖 [完整教程：RAG 系统开发指南](./docs/02-tech-stack/20-rag-full-pipeline.md)  
+📖 [向量数据库选型](./docs/02-tech-stack/08-vector-db-basics.md)
+
+</td>
+<td width="50%">
+
+**模块9：上下文工程（Context Engineering）⭐⭐⭐**
+
+> "将海量信息中最相关的内容，精准放入有限上下文窗口的艺术"
+
+**核心策略 - The 4 Acts**：
+- **Write（写入）**：Prompt 设计、Memory 结构化存储
+- **Select（选择）**：RAG 检索、动态工具加载
+- **Compress（压缩）**：摘要生成、Token 剪枝优化
+- **Isolate（隔离）**：状态隔离、沙盒环境设计
+
+**工程实践技巧**：
+- KV Cache 优化（降低 90% 成本与延迟）
+- 12-Factor Agents 生产级设计原则
+- Claude Code 最佳实践
+
+**常见问题修复**：
+- 上下文中毒（Poisoning）
+- 注意力分散（Distraction）
+- 信息冲突（Clash）
+
+📖 [必读：上下文工程资源合集](./docs/02-tech-stack/13-context-engineering-resources.md) 🔥  
+📖 [深度指南：Context Engineering 2.0](./docs/02-tech-stack/18-context-engineering-guide.md)
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+**模块10：智能体通信标准与协议**
+
+| 协议 | 功能定位 | 核心能力 | 应用场景 |
+|:-----|:---------|:---------|:---------|
+| **MCP** | Model Context Protocol | 标准化上下文与工具交换 | 跨平台工具调用、统一接口 |
+| **A2A** | Agent-to-Agent | 智能体间协作通信 | Multi-Agent 系统、任务分发 |
+| **ANP** | Agent Negotiation Protocol | 智能体协商与共识 | 资源分配、冲突解决 |
+
+📖 [协议详解：MCP 完全指南](./docs/02-tech-stack/14-mcp-protocol.md)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**模块11：模型微调与强化学习**
+
+从监督微调到强化学习的完整路径：
+
+**11.1 监督微调（SFT）**
+- LoRA/QLoRA 参数高效微调原理
+- Function Call 微调实战
+- 指令数据集构建技巧
+- LlaMA-Factory 实战应用
+
+**11.2 强化学习（RLHF）**
+- **PPO**：Proximal Policy Optimization
+- **DPO**：Direct Preference Optimization
+- **GRPO**：DeepSeek 的群组相对策略优化
+- Reward Model 训练技巧
+
+**11.3 Agent RL 应用**
+- 工具调用策略优化
+- 规划能力增强训练
+- 自我修正机制训练
+
+📖 [完整指南：Agent 强化学习](./docs/02-tech-stack/21-agent-reinforcement-learning.md)  
+📖 [实战：SFT 监督微调](./docs/02-tech-stack/16-sft-finetuning.md)
+
+</td>
+<td width="50%">
+
+**模块12：性能评估与效果量化**
+
+如何科学评估 Agent 性能？
+
+**评估维度**：
+- **准确性**：任务完成率、答案正确率
+- **效率**：平均步数、Token 消耗
+- **鲁棒性**：错误恢复、异常处理
+- **成本**：API 调用次数、计算资源
+
+**评估框架**：
+- **AgentBench**：通用 Agent 评测基准
+- **WebArena**：Web 任务评测
+- **KGQA**：知识图谱问答
+- **HotPotQA**：多跳推理测试
+
+**自定义评估**：
+- 构建测试集的方法论
+- 使用 Ragas 自动评估
+- 人工评估与 LLM-as-Judge
+
+📖 [评估指南：科学评估 Agent](./docs/01-theory/09-evaluation-metrics.md)  
+📖 [AgentBench 详解](./docs/01-theory/08-agent-bench.md)
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🛡️ 生产级系统设计（工程化实践）
+
+#### 高可用架构设计
+- 缓存策略（Semantic Cache、KV Cache）
+- 异步任务队列与重试机制
+- 降级与熔断
+
+#### 可观测性（Observability）
+- LangSmith/LangFuse 链路追踪
+- 成本监控与 Token 审计
+- 性能分析与优化
+
+#### 安全性（Security）
+- Prompt 注入防御
+- 权限控制与沙盒隔离
+- 人机协作边界（Human-in-the-loop）
+
+📖 [完整指南：高可用 RAG 系统](./docs/03-practice/02-high-availability-rag.md)  
+📖 [安全性指南](./docs/03-practice/03-agent-security.md)
+
+---
+
+### 💼 简历级实战项目 🚀
+
+> **💡 学习目标**：掌握复杂 Multi-Agent 系统设计，完成可写进简历的高质量项目  
+> **⏱️ 学习时长**：3-4 周 | **难度**：⭐⭐⭐⭐⭐ | **重要性**：⭐⭐⭐⭐⭐（简历核心）
+
+#### 🎯 核心收获
+- ✅ 掌握复杂 Multi-Agent 系统设计
+- ✅ 理解生产级系统的工程化实践
+- ✅ 完成可写进简历的高质量项目
+
+---
+
+#### 🎨 简历级实战项目详解
 
 > **每个项目都提供完整代码 + 算法岗/开发岗双版本简历写法**
+
+##### 🎯 简历项目详细教程
 
 <details>
 <summary><b>📄 项目一：自动化论文检索与分析 Agent（⭐ 推荐新手）</b></summary>
@@ -1088,6 +1520,223 @@ AgentGuide 提供 **n 个简历级实战项目**，每个项目都提供：
 - [优质 Agent 实战开源项目](./projects/04-end-to-end-projects/README.md)
 - [优质 Workflow 项目](./projects/05-agent-workflows/README.md)
 - [优质 Agent 项目集合](./projects/06-project-collections/README.md)
+
+</details>
+
+<details>
+<summary><b>🧳 项目五：智能旅行助手 - Multi-Agent 协作系统（⭐ 适合展示协作能力）</b></summary>
+
+<br/>
+
+**项目核心**：打造智能旅行助手，通过多Agent协作实现从需求分析到行程规划的完整闭环
+
+**适合场景**：
+- ✅ 面试 Multi-Agent 协作岗位
+- ✅ 展示复杂任务分解与Agent编排能力
+- ✅ 中等难度，适合有一定基础的同学
+
+**你将获得的核心能力**：
+
+<table>
+<tr>
+<td width="50%">
+
+**🔬 算法线能力**
+- Multi-Agent 协作策略设计
+- 任务分解与规划算法
+- Agent 通信协议优化
+- 共识机制与冲突解决
+
+</td>
+<td width="50%">
+
+**🛠️ 工程线能力**
+- AutoGen/CrewAI 框架实战
+- 多API集成与编排
+- 异步任务处理与并发控制
+- 分布式 Agent 系统设计
+
+</td>
+</tr>
+</table>
+
+**技术栈**：AutoGen / CrewAI + 天气API + 航班API + 酒店API + GPT-4
+
+**项目亮点**：
+- ✅ 3 个专业 Agent 协同工作（需求分析师、预算规划师、行程执行者）
+- ✅ 层级式通信：Supervisor 模式 + 消息队列
+- ✅ 智能决策：预算超支自动调整、天气影响行程变更
+- ✅ MCP 协议集成实践
+
+**学习路径**：
+- [ ] 项目需求与技术选型 _（即将推出）_
+- [ ] 系统架构设计 _（即将推出）_
+- [ ] 核心代码实现 _（即将推出）_
+- [ ] 部署与演示 _（即将推出）_
+- [ ] 📝 如何写进简历？（算法岗 vs 开发岗）_（即将推出）_
+
+</details>
+
+<details>
+<summary><b>🔬 项目六：自动化深度研究智能体（⭐ 适合科研方向）</b></summary>
+
+<br/>
+
+**项目核心**：复现 DeepResearch Agent，打造自动化文献检索与分析系统
+
+**适合场景**：
+- ✅ 面试 AI 研究助手相关岗位
+- ✅ 展示复杂工作流设计与知识整合能力
+- ✅ 高级项目，适合有科研背景的同学
+
+**你将获得的核心能力**：
+
+<table>
+<tr>
+<td width="50%">
+
+**🔬 算法线能力**
+- 知识图谱构建算法
+- 多源信息融合策略
+- 自动化推理与总结
+- 长文本生成优化
+
+</td>
+<td width="50%">
+
+**🛠️ 工程线能力**
+- LangGraph 状态机设计
+- ArXiv / Semantic Scholar API集成
+- GraphRAG 知识整合
+- 分布式爬虫与数据处理
+
+</td>
+</tr>
+</table>
+
+**技术栈**：LangGraph + ArXiv API + Semantic Scholar + GraphRAG + GPT-4/Claude
+
+**项目亮点**：
+- ✅ 复现 DeepResearch Agent 核心功能
+- ✅ 自动化文献检索与分析（日均处理100+论文）
+- ✅ 知识图谱自动构建与可视化
+- ✅ 研究报告自动生成（3000+字深度报告）
+
+**学习路径**：
+- [ ] 项目需求与技术选型 _（即将推出）_
+- [ ] 系统架构设计 _（即将推出）_
+- [ ] 核心代码实现 _（即将推出）_
+- [ ] 部署与演示 _（即将推出）_
+- [ ] 📝 如何写进简历？（算法岗 vs 开发岗）_（即将推出）_
+
+</details>
+
+<details>
+<summary><b>🎮 项目七：桌游小镇社会模拟 - 大规模Agent系统（⭐ 高级，展示系统设计能力）</b></summary>
+
+<br/>
+
+**项目核心**：构建25个Agent角色的社会模拟系统，探索复杂社交网络与记忆机制
+
+**适合场景**：
+- ✅ 面试大规模Agent系统设计岗位
+- ✅ 展示社交模拟与记忆系统设计能力
+- ✅ 高级项目，适合冲刺大厂
+
+**你将获得的核心能力**：
+
+<table>
+<tr>
+<td width="50%">
+
+**🔬 算法线能力**
+- 社交网络建模
+- 记忆压缩与检索算法
+- 行为预测与模拟
+- 涌现行为分析
+
+</td>
+<td width="50%">
+
+**🛠️ 工程线能力**
+- 自定义 Agent 框架设计
+- SQLite 记忆存储优化
+- 事件驱动架构
+- 大规模并发处理
+
+</td>
+</tr>
+</table>
+
+**技术栈**：自定义 Agent 框架 + SQLite + 事件驱动架构 + 可视化界面
+
+**项目亮点**：
+- ✅ 25 个 Agent 角色自主交互与演化
+- ✅ 记忆与关系网络动态管理
+- ✅ 复杂社交行为模拟（友谊、竞争、合作）
+- ✅ 可视化展示社交网络演化过程
+
+**学习路径**：
+- [ ] 项目需求与技术选型 _（即将推出）_
+- [ ] 系统架构设计 _（即将推出）_
+- [ ] 核心代码实现 _（即将推出）_
+- [ ] 部署与演示 _（即将推出）_
+- [ ] 📝 如何写进简历？（算法岗 vs 开发岗）_（即将推出）_
+
+</details>
+
+<details>
+<summary><b>🎓 项目八：毕业设计 - 综合实战项目（⭐⭐⭐ 必做）</b></summary>
+
+<br/>
+
+**项目核心**：综合运用所学知识，构建属于你的完整 Agent 应用
+
+**适合场景**：
+- ✅ 所有同学必做
+- ✅ 简历核心项目
+- ✅ 面试必讲项目
+
+**设计要求**：
+1. ✅ **选择真实业务场景**（RAG/自动化/研究助手等）
+2. ✅ **端到端系统设计**（需求分析 → 架构设计 → 实现 → 优化 → 部署）
+3. ✅ **包含量化评估**（构建测试集、性能指标、成本分析）
+4. ✅ **生产级考虑**（异常处理、监控告警、成本优化）
+5. ✅ **可写进简历**（提供算法岗和开发岗两种描述版本）
+
+**推荐方向**：
+
+<table>
+<tr>
+<td width="50%">
+
+**🔬 算法岗方向**
+- 企业级 RAG 检索算法优化
+- Agent 规划策略创新
+- Multi-Agent 协作算法
+- 强化学习策略优化
+
+</td>
+<td width="50%">
+
+**🛠️ 开发岗方向**
+- 企业级 RAG 知识问答系统
+- Agent 驱动的 RPA 自动化平台
+- 智能研究助手（论文分析/代码生成）
+- Multi-Agent 协作系统（客服/销售/运营）
+
+</td>
+</tr>
+</table>
+
+**核心产出**：
+- ✅ 完整的系统设计文档
+- ✅ 可运行的代码实现
+- ✅ 性能评估报告
+- ✅ 算法岗 + 开发岗双版本简历描述
+- ✅ 面试讲解准备材料
+
+📖 [毕业设计完整指南](./docs/03-practice/04-graduation-project.md)
 
 </details>
 

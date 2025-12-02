@@ -1,5 +1,5 @@
 # AgentGuide
-![ScreenShot_2025-11-03_185515_441.png](https://youke1.picui.cn/s1/2025/11/03/690889f9b5d71.png)
+[![1764666915027.png](https://free.picui.cn/free/2025/12/02/692eadf2be3ac.png)](https://free.picui.cn/free/2025/12/02/692eadf2be3ac.png)
 
 <div align="center">
     <img src="https://img.shields.io/badge/Agent-开发指南-blue?style=for-the-badge" alt="Agent开发指南">

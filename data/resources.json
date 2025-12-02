@@ -84,6 +84,18 @@
     "featured": false
   },
   {
+    "id": "agent",
+    "title": "🚀 大模型 / Agent 全栈学习路线",
+    "description": "<img src=\"https://youke1.picui.cn/s1/2025/12/03/692f10fac4dcf.png\" height=\"700\" alt=\"从零到Offer的完整路径\">",
+    "category": "路线",
+    "tags": [],
+    "level": "入门",
+    "type": "路线",
+    "url": "https://github.com/adongwanai/AgentGuide/blob/main/docs/05-roadmaps/AgentGuide开源学习路线（简易版本）.md",
+    "date": "2025-12-02",
+    "featured": false
+  },
+  {
     "id": "parlant-ai-agent-agent",
     "title": "Parlant：如何让AI Agent真正\"靠谱\"？深度解析Agent合规保障方案",
     "description": "> 作为大模型算法工程师，今天和大家聊聊AI Agent在生产环境中最头疼的问题：如何保证Agent不\"出格\"？",

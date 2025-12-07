@@ -1793,7 +1793,7 @@ python quickstart_rag_agent.py
 ### 💬 加入 AI Agent 学习社群
 
 **为什么要加入社群？**
-![1764469658183.jpg](https://youke1.picui.cn/s1/2025/11/30/692bab6e23c3a.jpg)
+![1764469658183.jpg](https://raw.githubusercontent.com/adongwanai/Awesome-Awesome-LLMs/main/1130896b1a6d844cc1166d04bdd520e3.jpg)
 
 - ✅ **每周技术分享**：Agent 最新论文解读、工程实践经验
 - ✅ **简历面试辅导**：免费简历诊断、模拟面试、内推机会

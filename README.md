@@ -1584,17 +1584,86 @@ AgentGuide 提供 **n 个简历级实战项目**，每个项目都提供：
 > 💡 **学习目标**：系统准备面试，提升 Offer 成功率  
 > 📝 **两条线不同的面试策略**：算法岗讲创新，开发岗讲价值
 
-#### 📚 完整面试题库（150+题）
+#### 📚 完整面试题库（200+题）🔥 全面升级
 
-**核心通用题库（两个岗位都需要）**
-- [x] [📘 理论基础题](./docs/04-interview/01-theory-questions.md) - LLM/VLM/RLHF 56题
-- [x] [📊 RAG系统题](./docs/04-interview/02-rag-questions.md) - 检索、索引、优化 12题
-- [x] [🤖 Agent核心题](./docs/04-interview/03-agent-questions.md) - ReAct、Memory、Multi-Agent 13题
-- [x] [💻 编程实战题](./docs/04-interview/04-coding-questions.md) - 手撕代码 23题
+> **🎯 题库特色**：
+> - ✅ 完整覆盖 LLM/VLM/RLHF/RAG/Agent 全技术栈
+> - ✅ 包含美团、字节、阿里等一线大厂真题
+> - ✅ 难度分级 + 公司来源标注
+> - ✅ 区分算法岗/开发岗重点
 
-**岗位专项题库（针对性强化）**
-- [x] [🔬 算法岗专项](./docs/04-interview/05-algorithm-specialized.md) - 算法创新/推导/实验/论文 45题
-- [x] [🛠️ 开发岗专项](./docs/04-interview/06-development-specialized.md) - 系统设计/工程实践/选型/落地 45题
+**📖 核心通用题库（两个岗位都需要）**
+
+<table>
+<tr>
+<td width="50%">
+
+**理论基础（必学）**
+- [x] [📘 LLM/VLM/RLHF理论题](./docs/04-interview/01-theory-questions.md)
+  - **LLM核心**: 32题（Transformer、位置编码、MHA/MQA/GQA等）
+  - **推理优化**: 16题（KV Cache、LoRA、量化、分布式训练）
+  - **VLM多模态**: 18题（CLIP、融合策略、BLIP等）
+  - **RLHF对齐**: 32题（SFT、PPO、DPO、GRPO等）
+  - **总计**: **98题** ⬆️ 新增42题
+
+**RAG系统（开发岗重点）**
+- [x] [📊 RAG全流程题](./docs/04-interview/02-rag-questions.md)
+  - **核心原理**: 检索、索引、生成
+  - **检索优化**: 混合检索、BM25、Reranker
+  - **高级技术**: GraphRAG、意图识别、增量更新
+  - **总计**: **22题** ⬆️ 新增10题
+
+</td>
+<td width="50%">
+
+**Agent开发（核心）**
+- [x] [🤖 Agent系统题](./docs/04-interview/03-agent-questions.md)
+  - **核心概念**: ReAct、Memory、Tool Use
+  - **Multi-Agent**: 协作机制、调度策略
+  - **系统设计**: 记忆系统、工具调用、容错机制
+  - **工程实践**: 并发安全、性能优化、可解释性
+  - **总计**: **52题** ⬆️ 新增39题
+
+**编程实战（必备）**
+- [x] [💻 手撕代码题](./docs/04-interview/04-coding-questions.md)
+  - Self-Attention、LoRA、ReAct等核心算法实现
+  - RAG系统、Agent框架等完整系统
+  - **总计**: **23题**
+
+</td>
+</tr>
+</table>
+
+**🎯 岗位专项题库（针对性强化）**
+
+- [x] [🔬 算法岗专项](./docs/04-interview/05-algorithm-specialized.md) - 算法创新/推导/实验/论文 **45题**
+- [x] [🛠️ 开发岗专项](./docs/04-interview/06-development-specialized.md) - 系统设计/工程实践/选型/落地 **45题**
+
+**🏢 真实面经与进阶**
+
+- [x] [📋 大厂真实面经](./docs/04-interview/12-company-interview-cases.md) - 美团/字节/阿里等16个完整案例
+- [x] [📊 模型评估专题](./docs/04-interview/13-model-evaluation.md) - BLEU/ROUGE、基准测试、LLM-as-Judge **10题**
+- [x] [🔮 前景与趋势](./docs/04-interview/14-llm-future-trends.md) - AGI、多模态、世界模型等开放讨论 **9题**
+- [x] [💬 开放性讨论](./docs/04-interview/15-open-discussion.md) - 技术判断、学习建议、核心素质 **8题**
+
+**💡 题库使用建议**
+
+```
+第一阶段（2-3周）：系统学习
+  ├─ 01-理论基础题（LLM/VLM/RLHF）→ 打基础
+  ├─ 02-RAG系统题 → 掌握检索技术
+  └─ 03-Agent核心题（Q1-Q13）→ 理解Agent原理
+
+第二阶段（2-3周）：深入强化
+  ├─ 03-Agent系统题（Q14-Q52）→ 工程实践
+  ├─ 05/06-岗位专项 → 针对性准备
+  └─ 04-编程实战题 → 手撕代码
+
+第三阶段（1-2周）：冲刺突破
+  ├─ 12-真实面经 → 模拟完整面试
+  ├─ 13-模型评估 → 掌握评估方法
+  └─ 14/15-开放讨论 → 展示思维深度
+```
 
 #### 求职软技能
 - [ ] [📝 简历编写指南](./docs/04-interview/12-resume-guide.md) - 待创建

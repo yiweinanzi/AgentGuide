@@ -636,6 +636,18 @@
     "featured": false
   },
   {
+    "id": "agentic-rag",
+    "title": "agentic_rag",
+    "description": "> 本文系统梳理Agentic RAG领域的优质开源项目和前沿论文，包含GitHub链接、论文地址和核心创新点。",
+    "category": "RAG",
+    "tags": [],
+    "level": "入门",
+    "type": "论文合集",
+    "url": "https://github.com/adongwanai/AgentGuide/blob/main/resources/rag/papers/agentic_rag/agentic_rag.md",
+    "date": "2026-01-01",
+    "featured": false
+  },
+  {
     "id": "ai-agent-projects-examples",
     "title": "AI Agent Projects & Examples",
     "description": "This section provides a collection of practical, end-to-end AI Agent projects and curated resource lists. These examples are designed to showcase real-world applications and provide hands-on learning opportunities.",

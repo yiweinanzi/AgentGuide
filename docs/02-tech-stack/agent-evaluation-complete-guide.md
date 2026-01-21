@@ -1,12 +1,6 @@
 # AI Agent 评估完全指南
 ## 给大模型算法工程师的实战手册（附吐槽与真相）
 
-> **原文来源**: Anthropic - Demystifying evals for AI agents
-> **发布时间**: 2026年1月9日
-> **原文链接**: https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents
-
----
-
 ## 写在前面
 
 如果你正在开发 AI Agent，大概率已经体验过这种崩溃时刻：
@@ -113,7 +107,6 @@ Anthropic 和 Descript、Bolt 等团队的经验告诉我们，**系统化评估
 现在明白为什么 Claude Code、Bolt 这些顶级团队都在死磕 Evals 了吗？不是因为他们闲，是因为**不这么干就死定了**。
 
 ---
-
 ## 2. 重新认识评估系统
 
 ### 2.1 核心组件：别再把 Agent 当函数测了

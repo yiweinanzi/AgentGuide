@@ -1658,6 +1658,7 @@ AgentGuide 提供 **n 个简历级实战项目**，每个项目都提供：
 - [x] [🔮 前景与趋势](./docs/04-interview/14-llm-future-trends.md) - AGI、多模态、世界模型等开放讨论 **9题**
 - [x] [💬 开放性讨论](./docs/04-interview/15-open-discussion.md) - 技术判断、学习建议、核心素质 **8题**
 
+
 **💡 题库使用建议**
 
 ```
@@ -1874,7 +1875,8 @@ python quickstart_rag_agent.py
 ### 💬 加入 AI Agent 学习社群
 
 **为什么要加入社群？**
-![defa45a01dd77b2279ea4e9c1f4c6a8c.jpg](https://raw.githubusercontent.com/adongwanai/Awesome-Awesome-LLMs/main/defa45a01dd77b2279ea4e9c1f4c6a8c.jpg)
+![49566fdc5207462509b1875190658023.jpg](https://raw.githubusercontent.com/adongwanai/Awesome-Awesome-LLMs/main/49566fdc5207462509b1875190658023.jpg)
+
 
 
 

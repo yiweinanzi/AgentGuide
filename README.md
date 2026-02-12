@@ -1875,7 +1875,8 @@ python quickstart_rag_agent.py
 ### 💬 加入 AI Agent 学习社群
 
 **为什么要加入社群？**
-![49566fdc5207462509b1875190658023.jpg](https://raw.githubusercontent.com/adongwanai/Awesome-Awesome-LLMs/main/49566fdc5207462509b1875190658023.jpg)
+![f3d75c169d19d7e3b4d51e2f06e2202e.jpg](https://raw.githubusercontent.com/adongwanai/Awesome-Awesome-LLMs/main/f3d75c169d19d7e3b4d51e2f06e2202e.jpg)
+
 
 
 

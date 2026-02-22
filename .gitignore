@@ -12,3 +12,8 @@ LICENSE
 CHANGELOG.md
 READY_TO_LAUNCH.md
 
+# ai-research-ebook 构建产物和依赖
+external/ai-research-ebook/dist/
+external/ai-research-ebook/node_modules/
+external/ai-research-ebook/.astro/
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="description" content="精选 AI 面试题库，助你高效备战技术面试"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v5.18.0"><link rel="icon" type="image/svg+xml" href="/AgentGuide/interview/favicon.svg"><link rel="canonical" href="https://adongwanai.github.io/AgentGuide/interview"><script>
+      (() => {
+        const key = 'ig-theme';
+        try {
+          const saved = localStorage.getItem(key);
+          const theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script><title>InterviewGuide - AI 面经刷题网站</title><link rel="stylesheet" href="/AgentGuide/interview/_astro/index.XQMXqp1n.css"></head> <body class="bg-primary text-slate-900 min-h-screen flex flex-col font-sans selection:bg-indigo-500/25"> <header class="fixed top-0 left-0 right-0 bg-primary/80 backdrop-blur-md border-b border-slate-900/10 z-50"> <nav class="max-w-7xl mx-auto px-6 h-[70px] flex justify-between items-center"> <a href="/AgentGuide/interview/" class="text-xl font-bold"> <span class="gradient-text">InterviewGuide</span> </a> <div class="flex items-center gap-3"> <button type="button" data-theme-toggle class="theme-toggle-btn" aria-label="切换主题" title="切换浅色/深色"> <span data-theme-icon>🌙</span> <span data-theme-label>深色</span> </button> <ul class="hidden md:flex gap-6 items-center"> <li><a href="/AgentGuide/interview/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">首页</a></li> <li><a href="/AgentGuide/interview/companies/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">公司定向</a></li> <li><a href="/AgentGuide/interview/hot/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">高频优先</a></li> <li><a href="/AgentGuide/interview/categories/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">知识点</a></li> <li><a href="/AgentGuide/interview/progress/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">进度</a></li> </ul> </div> </nav> </header> <main class="flex-1 pt-[70px]">  <section class="py-20 px-6"> <div class="max-w-5xl mx-auto text-center"> <h1 class="text-5xl md:text-6xl font-bold mb-6"> <span class="gradient-text">InterviewGuide</span> </h1> <p class="text-xl text-slate-600 mb-10">
+面向 AI 算法岗的结构化面经学习站
+</p> <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 text-left"> <div class="bg-secondary rounded-xl border border-slate-900/10 p-4"> <p class="text-xs text-slate-500">题目总量</p> <p class="text-2xl font-bold">12960</p> </div> <div class="bg-secondary rounded-xl border border-slate-900/10 p-4"> <p class="text-xs text-slate-500">公司数</p> <p class="text-2xl font-bold">28</p> </div> <div class="bg-secondary rounded-xl border border-slate-900/10 p-4"> <p class="text-xs text-slate-500">分类数</p> <p class="text-2xl font-bold">9</p> </div> <div class="bg-secondary rounded-xl border border-slate-900/10 p-4"> <p class="text-xs text-slate-500">高频题</p> <p class="text-2xl font-bold">444</p> </div> </div> <div class="grid md:grid-cols-3 gap-4"> <a href="/AgentGuide/interview/companies/" class="question-card bg-secondary rounded-xl border border-slate-900/10 p-6 text-left"> <h2 class="text-lg font-semibold text-slate-900">公司定向（默认）</h2> <p class="text-sm text-slate-600 mt-2">按目标公司快速筛题，优先突击高价值问题。</p> </a><a href="/AgentGuide/interview/hot/" class="question-card bg-secondary rounded-xl border border-slate-900/10 p-6 text-left"> <h2 class="text-lg font-semibold text-slate-900">高频优先</h2> <p class="text-sm text-slate-600 mt-2">按出现次数从高到低刷题，冲刺期效率更高。</p> </a><a href="/AgentGuide/interview/categories/" class="question-card bg-secondary rounded-xl border border-slate-900/10 p-6 text-left"> <h2 class="text-lg font-semibold text-slate-900">知识点学习</h2> <p class="text-sm text-slate-600 mt-2">按 NLP/ML/DL/推荐/CV 等模块系统复习。</p> </a> </div> <div class="mt-10"> <a href="/AgentGuide/interview/companies/" class="inline-block px-10 py-4 rounded-xl font-semibold text-white transition-all hover:shadow-lg hover:scale-105" style="background: linear-gradient(135deg, #6366f1, #8b5cf6)">
+进入公司定向刷题
+</a> </div> </div> </section>  </main> <footer class="bg-secondary border-t border-slate-900/10 py-6 mt-auto"> <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"> <p class="text-slate-500 text-sm">&copy; 2026 InterviewGuide. Built with Astro + Tailwind.</p> <div class="flex gap-6"> <a href="https://github.com/yiweinanzi/InterviewGuide" target="_blank" rel="noopener" class="text-slate-500 hover:text-indigo-500 transition-colors text-sm">GitHub</a> <a href="/AgentGuide/interview/companies/" class="text-slate-500 hover:text-indigo-500 transition-colors text-sm">开始刷题</a> </div> </div> </footer> <script>
+      (() => {
+        const key = 'ig-theme';
+        const root = document.documentElement;
+        const iconNodes = () => document.querySelectorAll('[data-theme-icon]');
+        const labelNodes = () => document.querySelectorAll('[data-theme-label]');
+
+        const currentTheme = () => (root.dataset.theme === 'dark' ? 'dark' : 'light');
+
+        const syncThemeUI = () => {
+          const isDark = currentTheme() === 'dark';
+          for (const node of iconNodes()) node.textContent = isDark ? '☀️' : '🌙';
+          for (const node of labelNodes()) node.textContent = isDark ? '浅色' : '深色';
+        };
+
+        const setTheme = (theme) => {
+          root.dataset.theme = theme === 'dark' ? 'dark' : 'light';
+          try {
+            localStorage.setItem(key, root.dataset.theme);
+          } catch {}
+          syncThemeUI();
+        };
+
+        document.addEventListener('click', (event) => {
+          const target = event.target;
+          if (!(target instanceof Element)) return;
+          const button = target.closest('[data-theme-toggle]');
+          if (!button) return;
+          setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+        });
+
+        document.addEventListener('astro:after-swap', syncThemeUI);
+        syncThemeUI();
+      })();
+    </script> </body> </html>

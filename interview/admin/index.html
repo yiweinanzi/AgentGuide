@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="zh-CN" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="description" content="弱门禁管理页：生成结构化更新 payload"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v5.18.0"><link rel="icon" type="image/svg+xml" href="/AgentGuide/interview/favicon.svg"><link rel="canonical" href="https://adongwanai.github.io/AgentGuide/interview/admin/"><script>
+      (() => {
+        const key = 'ig-theme';
+        try {
+          const saved = localStorage.getItem(key);
+          const theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script><title>管理员更新入口 | InterviewGuide</title><link rel="stylesheet" href="/AgentGuide/interview/_astro/index.XQMXqp1n.css"></head> <body class="bg-primary text-slate-900 min-h-screen flex flex-col font-sans selection:bg-indigo-500/25"> <header class="fixed top-0 left-0 right-0 bg-primary/80 backdrop-blur-md border-b border-slate-900/10 z-50"> <nav class="max-w-7xl mx-auto px-6 h-[70px] flex justify-between items-center"> <a href="/AgentGuide/interview/" class="text-xl font-bold"> <span class="gradient-text">InterviewGuide</span> </a> <div class="flex items-center gap-3"> <button type="button" data-theme-toggle class="theme-toggle-btn" aria-label="切换主题" title="切换浅色/深色"> <span data-theme-icon>🌙</span> <span data-theme-label>深色</span> </button> <ul class="hidden md:flex gap-6 items-center"> <li><a href="/AgentGuide/interview/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">首页</a></li> <li><a href="/AgentGuide/interview/companies/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">公司定向</a></li> <li><a href="/AgentGuide/interview/hot/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">高频优先</a></li> <li><a href="/AgentGuide/interview/categories/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">知识点</a></li> <li><a href="/AgentGuide/interview/progress/" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">进度</a></li> </ul> </div> </nav> </header> <main class="flex-1 pt-[70px]">  <section class="py-12 px-6"> <div class="max-w-5xl mx-auto"> <div class="mb-8"> <h1 class="text-3xl md:text-4xl font-bold">管理员更新入口</h1> <p class="text-slate-600 mt-2">用于生成结构化更新 payload 并跳转创建 GitHub Issue。</p> </div> <div id="gate-panel" class="bg-secondary rounded-2xl border border-slate-900/10 p-6"> <h2 class="text-lg font-semibold">弱门禁校验</h2> <p class="text-sm text-slate-500 mt-2">请输入管理口令。默认口令：<code>interview-guide-admin</code></p> <div class="mt-4 flex flex-wrap gap-3"> <input id="admin-key-input" type="password" autocomplete="off" placeholder="输入管理口令" class="w-full md:w-96 rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> <button id="admin-key-submit" type="button" class="rounded-xl px-5 py-3 text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-500 transition-colors">
+解锁
+</button> </div> <p id="gate-message" class="text-sm text-slate-500 mt-3">当前状态：未解锁</p> </div> <div id="admin-form-panel" class="hidden mt-8 bg-secondary rounded-2xl border border-slate-900/10 p-6"> <form id="admin-form" class="space-y-4"> <div class="grid md:grid-cols-2 gap-4"> <label class="text-sm font-medium text-slate-700">
+变更标题
+<input name="title" required class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> </label> <label class="text-sm font-medium text-slate-700">
+题目 ID（可选）
+<input name="questionId" placeholder="q-123" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> </label> </div> <div class="grid md:grid-cols-2 gap-4"> <label class="text-sm font-medium text-slate-700">
+公司（可选）
+<input name="company" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> </label> <label class="text-sm font-medium text-slate-700">
+分类（可选）
+<input name="category" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> </label> </div> <div class="grid md:grid-cols-2 gap-4"> <label class="text-sm font-medium text-slate-700">
+变更类型
+<select name="changeType" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> <option value="add">add</option> <option value="update">update</option> <option value="delete">delete</option> <option value="other">other</option> </select> </label> <label class="text-sm font-medium text-slate-700">
+优先级
+<select name="priority" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> <option value="medium">medium</option> <option value="high">high</option> <option value="low">low</option> </select> </label> </div> <label class="text-sm font-medium text-slate-700 block">
+背景与原因
+<textarea name="reason" required rows="4" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"></textarea> </label> <label class="text-sm font-medium text-slate-700 block">
+期望变更
+<textarea name="proposedChange" required rows="4" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"></textarea> </label> <div class="grid md:grid-cols-2 gap-4"> <label class="text-sm font-medium text-slate-700">
+参考资料（可选）
+<input name="references" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> </label> <label class="text-sm font-medium text-slate-700">
+提交人（可选）
+<input name="reporter" class="mt-2 w-full rounded-xl border border-slate-900/10 bg-tertiary px-4 py-3 text-sm"> </label> </div> <div class="flex flex-wrap gap-3 pt-2"> <button type="submit" class="rounded-xl px-5 py-3 text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-500 transition-colors">
+生成 Payload
+</button> <a id="open-issue-link" href="#" target="_blank" rel="noopener" class="hidden rounded-xl px-5 py-3 text-sm font-semibold border border-indigo-400 text-indigo-600 hover:bg-indigo-50 transition-colors">
+打开 GitHub Issue
+</a> </div> </form> </div> <div class="mt-8 bg-secondary rounded-2xl border border-slate-900/10 p-6"> <div class="flex items-center justify-between gap-3 mb-3"> <h2 class="text-lg font-semibold">结构化 Payload 预览</h2> <a href="/AgentGuide/interview/progress/" class="text-sm text-indigo-600 hover:underline">返回学习进度</a> </div> <pre id="payload-preview" class="bg-slate-900 text-slate-100 rounded-xl p-4 text-xs md:text-sm overflow-x-auto min-h-[180px]">尚未生成 payload</pre> </div> </div> </section> <script type="module">const S="medium";function s(e){return(e??"").trim()}function I(e){return e==="add"||e==="update"||e==="delete"||e==="other"?e:"add"}function w(e){return e==="low"||e==="medium"||e==="high"?e:S}function v(e){const r=s(e.title)||"未命名变更",E=s(e.questionId)||"unknown",c=s(e.company)||"unknown",m=s(e.category)||"unknown",o=s(e.reason)||"未填写",u=s(e.proposedChange)||"未填写",d=s(e.references)||"无",y=s(e.reporter)||"anonymous",i=I(s(e.changeType)),g=w(s(e.priority)),a={schemaVersion:1,questionId:E,company:c,category:m,changeType:i,priority:g,reporter:y},h=`[Admin][${g}] ${r}`,n=["admin-update",`priority:${g}`,`change:${i}`],t=["### 背景与原因",o,"","### 期望变更",u,"","### 参考资料",d,"","### 结构化 Payload","```json",JSON.stringify(a,null,2),"```"].join(`
+`);return{title:h,labels:n,body:t,metadata:a}}function C(e){const r=new URLSearchParams;return r.set("title",e.title),r.set("body",e.body),r.set("labels",e.labels.join(",")),r.toString()}(()=>{const e="ig-admin-access-v1",r="interview-guide-admin",E="https://github.com/yiweinanzi/InterviewGuide/issues/new",c=document.getElementById("admin-key-input"),m=document.getElementById("admin-key-submit"),o=document.getElementById("gate-message"),u=document.getElementById("admin-form-panel"),d=document.getElementById("admin-form"),y=document.getElementById("payload-preview"),i=document.getElementById("open-issue-link"),g=()=>{try{return window.localStorage.getItem(e)==="granted"}catch{return!1}},a=n=>{u instanceof HTMLElement&&u.classList.toggle("hidden",!n),o instanceof HTMLElement&&(o.textContent=n?"当前状态：已解锁":"当前状态：未解锁",o.classList.toggle("text-emerald-600",n),o.classList.toggle("text-slate-500",!n))},h=n=>{try{n&&window.localStorage.setItem(e,"granted")}catch{}};m instanceof HTMLButtonElement&&c instanceof HTMLInputElement&&m.addEventListener("click",()=>{if(!(c.value.trim()===r)){a(!1),o instanceof HTMLElement&&(o.textContent="口令错误，请重试",o.classList.remove("text-emerald-600"),o.classList.add("text-red-600"));return}h(!0),a(!0),c.value=""}),d instanceof HTMLFormElement&&d.addEventListener("submit",n=>{n.preventDefault();const t=new FormData(d),l=String(t.get("changeType")??""),f=String(t.get("priority")??""),T=l==="add"||l==="update"||l==="delete"||l==="other"?l:void 0,L=f==="low"||f==="medium"||f==="high"?f:void 0,p=v({title:String(t.get("title")??""),company:String(t.get("company")??""),category:String(t.get("category")??""),questionId:String(t.get("questionId")??""),changeType:T,priority:L,reason:String(t.get("reason")??""),proposedChange:String(t.get("proposedChange")??""),references:String(t.get("references")??""),reporter:String(t.get("reporter")??"")});y instanceof HTMLElement&&(y.textContent=JSON.stringify(p,null,2)),i instanceof HTMLAnchorElement&&(i.href=`${E}?${C(p)}`,i.classList.remove("hidden"))}),a(g())})();</script>  </main> <footer class="bg-secondary border-t border-slate-900/10 py-6 mt-auto"> <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"> <p class="text-slate-500 text-sm">&copy; 2026 InterviewGuide. Built with Astro + Tailwind.</p> <div class="flex gap-6"> <a href="https://github.com/yiweinanzi/InterviewGuide" target="_blank" rel="noopener" class="text-slate-500 hover:text-indigo-500 transition-colors text-sm">GitHub</a> <a href="/AgentGuide/interview/companies/" class="text-slate-500 hover:text-indigo-500 transition-colors text-sm">开始刷题</a> </div> </div> </footer> <script>
+      (() => {
+        const key = 'ig-theme';
+        const root = document.documentElement;
+        const iconNodes = () => document.querySelectorAll('[data-theme-icon]');
+        const labelNodes = () => document.querySelectorAll('[data-theme-label]');
+
+        const currentTheme = () => (root.dataset.theme === 'dark' ? 'dark' : 'light');
+
+        const syncThemeUI = () => {
+          const isDark = currentTheme() === 'dark';
+          for (const node of iconNodes()) node.textContent = isDark ? '☀️' : '🌙';
+          for (const node of labelNodes()) node.textContent = isDark ? '浅色' : '深色';
+        };
+
+        const setTheme = (theme) => {
+          root.dataset.theme = theme === 'dark' ? 'dark' : 'light';
+          try {
+            localStorage.setItem(key, root.dataset.theme);
+          } catch {}
+          syncThemeUI();
+        };
+
+        document.addEventListener('click', (event) => {
+          const target = event.target;
+          if (!(target instanceof Element)) return;
+          const button = target.closest('[data-theme-toggle]');
+          if (!button) return;
+          setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+        });
+
+        document.addEventListener('astro:after-swap', syncThemeUI);
+        syncThemeUI();
+      })();
+    </script> </body> </html>

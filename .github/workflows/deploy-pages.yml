@@ -83,5 +83,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - id: deployment
         uses: actions/deploy-pages@v4

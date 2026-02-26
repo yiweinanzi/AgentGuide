@@ -17,3 +17,7 @@ external/ai-research-ebook/dist/
 external/ai-research-ebook/node_modules/
 external/ai-research-ebook/.astro/
 
+# InterviewGuide 构建产物和依赖
+external/InterviewGuide/dist/
+external/InterviewGuide/node_modules/
+external/InterviewGuide/.astro/

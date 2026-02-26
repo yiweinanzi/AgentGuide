@@ -25,10 +25,16 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: external/ai-research-ebook/package-lock.json
+          cache-dependency-path: |
+            external/ai-research-ebook/package-lock.json
+            external/InterviewGuide/package-lock.json
 
       - name: Install dependencies for research ebook
         working-directory: external/ai-research-ebook
+        run: npm ci
+
+      - name: Install dependencies for InterviewGuide
+        working-directory: external/InterviewGuide
         run: npm ci
 
       - name: Build research ebook with custom base path
@@ -41,18 +47,34 @@ jobs:
           GITHUB_REPOSITORY_URL: https://github.com/adongwanai/AgentGuide
         run: npm run build
 
+      - name: Build InterviewGuide with custom base path
+        working-directory: external/InterviewGuide
+        env:
+          SITE_URL: https://adongwanai.github.io
+          BASE_PATH: /AgentGuide/interview
+          GITHUB_USERNAME: adongwanai
+          GITHUB_REPO: AgentGuide
+          GITHUB_REPOSITORY: adongwanai/AgentGuide
+        run: npm run build
+
       - name: Copy to research directory
         run: |
           rm -rf research
           mkdir -p research
           cp -r external/ai-research-ebook/dist/* research/
 
-      - name: Commit research directory if changed
+      - name: Copy to interview directory
+        run: |
+          rm -rf interview
+          mkdir -p interview
+          cp -r external/InterviewGuide/dist/* interview/
+
+      - name: Commit generated sub-sites if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add research/
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update research ebook"
+          git add research/ interview/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update external sites"
           git push || echo "No changes to push"
 
       - uses: actions/upload-pages-artifact@v3

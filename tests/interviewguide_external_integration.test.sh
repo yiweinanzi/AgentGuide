@@ -14,6 +14,10 @@ grep -q "cp -r external/InterviewGuide/dist/\\* interview/" "$WORKFLOW_FILE"
 grep -q "paths-ignore:" "$WORKFLOW_FILE"
 grep -q "'research/\\*\\*'" "$WORKFLOW_FILE"
 grep -q "'interview/\\*\\*'" "$WORKFLOW_FILE"
+if grep -Eq "git add .*research/.*interview/" "$WORKFLOW_FILE"; then
+  echo "workflow should not auto-commit generated research/interview directories"
+  exit 1
+fi
 
 grep -q "external/InterviewGuide/dist/" "$GITIGNORE_FILE"
 grep -q "external/InterviewGuide/node_modules/" "$GITIGNORE_FILE"

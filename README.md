@@ -1875,8 +1875,7 @@ python quickstart_rag_agent.py
 ### 💬 加入 AI Agent 学习社群
 
 **为什么要加入社群？**
-![f3d75c169d19d7e3b4d51e2f06e2202e.jpg](https://raw.githubusercontent.com/adongwanai/Awesome-Awesome-LLMs/main/f3d75c169d19d7e3b4d51e2f06e2202e.jpg)
-
+![89491b5534a804fc5bbaab1cc7fa6c41.jpg](https://raw.githubusercontent.com/adongwanai/Awesome-Awesome-LLMs/main/89491b5534a804fc5bbaab1cc7fa6c41.jpg)
 
 
 
@@ -1893,7 +1892,11 @@ python quickstart_rag_agent.py
 2. **方式二**：关注公众号「阿东玩AI」，回复「AgentGuide」获取入群二维码
 3. **方式三**：[小红书@阿东玩AI](https://www.xiaohongshu.com/user/profile/5f310fd50000000001009df5)，私信"加群"
 
+
 **🎁 社群福利**：Agent 学习路线图 PDF + 面试题库 + 项目代码模板 + 大厂内推机会
+## Openclaw API Key
+这是我用过最便宜，价格最实惠的Key
+![](https://raw.githubusercontent.com/adongwanai/Awesome-Awesome-LLMs/main/5c715bba551b1354570f5744a1c487f2.jpg)
 
 ---
 
